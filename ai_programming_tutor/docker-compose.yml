@@ -1,0 +1,20 @@
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: ai_programming_tutor
+      MYSQL_ROOT_PASSWORD: tutor_root_password
+      MYSQL_USER: tutor_user
+      MYSQL_PASSWORD: tutor_password
+    ports: ["3306:3306"]
+    volumes: ["tutor_mysql:/var/lib/mysql"]
+  web:
+    build: .
+    environment:
+      SECRET_KEY: replace-in-production
+      DATABASE_URL: mysql+pymysql://tutor_user:tutor_password@mysql/ai_programming_tutor
+    ports: ["5000:5000"]
+    depends_on: [mysql]
+volumes:
+  tutor_mysql:
+
