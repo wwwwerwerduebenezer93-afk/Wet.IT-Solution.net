@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#071d2b" />
+    <title>BorderPay — Global payments</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="backdrops">
+      <div class="bg active"></div>
+      <div class="bg"></div>
+    </div>
+    <div class="shade"></div>
+    <header>
+      <a class="brand" href="#">Border<span>Pay</span></a>
+      <div class="trust">🔒 Protected demo environment</div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Payments without borders</div>
+        <h1>Send with confidence.<br /><em>Reach anywhere.</em></h1>
+        <p>
+          A polished prototype for secure international transfers with identity
+          checks, QR payment details and PIN approval.
+        </p>
+        <div class="badges">
+          <span>🌍 Global destinations</span><span>📷 Live photo check</span
+          ><span>▦ QR payments</span>
+        </div>
+      </section>
+      <section class="panel" id="authPanel">
+        <div class="tabs">
+          <button class="tab active" data-tab="login">Sign in</button
+          ><button class="tab" data-tab="register">Create account</button
+          ><button class="tab" data-tab="verify">Verify email</button>
+        </div>
+        <form id="login" class="form active">
+          <h2>Welcome back</h2>
+          <label
+            >Email<input
+              name="email"
+              type="email"
+              required
+              placeholder="you@example.com" /></label
+          ><label
+            >Password<input
+              name="password"
+              type="password"
+              required
+              minlength="8"
+              placeholder="••••••••" /></label
+          ><button class="primary">Sign in securely</button>
+        </form>
+        <form id="register" class="form">
+          <h2>Create your account</h2>
+          <div class="grid">
+            <label>Full name<input name="name" required /></label
+            ><label
+              >Country<select name="country" class="countries" required></select
+            ></label>
+          </div>
+          <div class="grid">
+            <label>Email<input name="email" type="email" required /></label
+            ><label
+              >Phone (international format)<input
+                name="phone"
+                type="tel"
+                placeholder="+233241234567"
+                pattern="\+[1-9][0-9]{7,14}"
+                required
+            /></label>
+          </div>
+          <div class="grid">
+            <label
+              >Password<input
+                name="password"
+                type="password"
+                minlength="8"
+                required /></label
+            ><label
+              >Payment PIN<input
+                name="pin"
+                inputmode="numeric"
+                pattern="[0-9]{4,6}"
+                maxlength="6"
+                type="password"
+                required
+            /></label>
+          </div>
+          <div class="camera">
+            <video id="video" autoplay playsinline></video
+            ><canvas id="canvas" hidden></canvas>
+            <div>
+              <b>Live picture verification</b
+              ><small>Allow camera access, then capture a clear photo.</small
+              ><button type="button" class="secondary" id="cameraBtn">
+                Start camera</button
+              ><button type="button" class="secondary" id="captureBtn">
+                Capture photo
+              </button>
+            </div>
+          </div>
+          <input type="hidden" name="livePhoto" /><button class="primary">
+            Create protected account
+          </button>
+        </form>
+        <form id="verify" class="form">
+          <h2>Verify email and phone</h2>
+          <label>Email<input name="email" type="email" required /></label>
+          <div class="grid verify">
+            <button type="button" class="secondary" id="sendCode">
+              Send email code</button
+            ><label
+              >Email code<input
+                name="code"
+                inputmode="numeric"
+                maxlength="6"
+                required
+            /></label>
+          </div>
+          <div id="demoCode" class="demo-code"></div>
+          <button class="primary">Verify email</button>
+          <hr />
+          <label
+            >Phone (international format)<input
+              name="phone"
+              type="tel"
+              placeholder="+233241234567"
+              pattern="\+[1-9][0-9]{7,14}"
+              required
+          /></label>
+          <div class="grid verify">
+            <button type="button" class="secondary" id="sendPhoneCode">
+              Send SMS code</button
+            ><label
+              >SMS code<input
+                name="phoneCode"
+                inputmode="numeric"
+                maxlength="6"
+                required
+            /></label>
+          </div>
+          <div id="demoPhoneCode" class="demo-code"></div>
+          <button type="button" class="primary" id="verifyPhone">
+            Verify phone
+          </button>
+        </form>
+      </section>
+      <section class="dashboard hidden" id="dashboard">
+        <div class="dash-head">
+          <div>
+            <div class="eyebrow">Secure dashboard</div>
+            <h2>Hello, <span id="userName"></span></h2>
+          </div>
+          <button class="secondary" id="logout">Sign out</button>
+        </div>
+        <div class="dash-grid">
+          <form id="transfer" class="card">
+            <h3>New international payment</h3>
+            <label
+              >Recipient email<input name="recipient" type="email" required
+            /></label>
+            <div class="grid">
+              <label
+                >Amount<input
+                  name="amount"
+                  type="number"
+                  min="0.01"
+                  max="100000"
+                  step="0.01"
+                  required /></label
+              ><label
+                >Currency<select name="currency">
+                  <option>GHS</option>
+                  <option>USD</option>
+                  <option>EUR</option>
+                  <option>GBP</option>
+                  <option>NGN</option>
+                  <option>ZAR</option>
+                  <option>CAD</option>
+                  <option>AUD</option>
+                  <option>JPY</option>
+                </select></label
+              >
+            </div>
+            <label
+              >Destination country<select
+                name="destinationCountry"
+                class="countries"
+                required
+              ></select></label
+            ><label>Note (optional)<input name="note" maxlength="120" /></label
+            ><label
+              >Payment PIN<input
+                name="pin"
+                type="password"
+                inputmode="numeric"
+                maxlength="6"
+                required /></label
+            ><button class="primary">Review and authorise</button
+            ><small>Demo only — no real funds are moved.</small>
+          </form>
+          <div class="stack">
+            <div class="card ai">
+              <h3>✨ AI Smart Search</h3>
+              <p>
+                Ask about countries, fees, verification, security, QR or
+                transfer status.
+              </p>
+              <form id="aiSearch">
+                <div class="search-row">
+                  <input
+                    name="question"
+                    placeholder="How is my payment protected?"
+                    maxlength="300"
+                    required
+                  /><button class="secondary">Ask AI</button>
+                </div>
+              </form>
+              <div id="aiAnswer" class="ai-answer">
+                Your answer will appear here.
+              </div>
+            </div>
+            <div class="card qr">
+              <h3>Receive with QR</h3>
+              <img id="qrImage" alt="Your payment QR code" />
+              <p>Let another user scan your verified payment details.</p>
+            </div>
+            <div class="card">
+              <h3>Recent activity</h3>
+              <div id="history" class="history"><p>No payments yet.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
