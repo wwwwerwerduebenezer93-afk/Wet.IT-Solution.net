@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio of Werwerdu Ebenezer Teye — software developer and digital innovator.">
+  <title>Werwerdu Ebenezer Teye | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav__logo" href="#top">Ebenezer Teye</a>
+
+      <button
+        class="nav__toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a class="nav__link" href="#hero">Home</a></li>
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#projects">Projects</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+      </ul>
+
+      <button
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch to dark mode"
+        aria-pressed="false"
+      >
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section" id="hero" aria-labelledby="hero-heading">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Hello, I'm</p>
+          <h1 class="hero__title" id="hero-heading">Werwerdu Ebenezer Teye</h1>
+          <p class="hero__subtitle">Software Developer &amp; Digital Innovator</p>
+          <p class="hero__text">
+            I design and build practical software solutions that help people work smarter.
+            Explore my portfolio to see what I've been working on.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">View My Work</a>
+            <a class="btn btn--secondary" href="#contact">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <figure class="hero__promo">
+            <img
+              src="EbenImage/1.jpeg"
+              alt="Werwerdu Ebenezer Teye (MR WET) — professional advertisement"
+              width="800"
+              height="1000"
+              loading="eager"
+            >
+          </figure>
+        </div>
+      </div>
+
+      <div class="skills-marquee" aria-label="Ebenezer's skills">
+        <div class="skills-marquee__track">
+          <ul class="skills-marquee__list">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>SQL &amp; Databases</li>
+            <li>REST APIs</li>
+            <li>Git &amp; GitHub</li>
+            <li>UI/UX Design</li>
+            <li>Problem Solving</li>
+            <li>Team Collaboration</li>
+          </ul>
+          <ul class="skills-marquee__list" aria-hidden="true">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>SQL &amp; Databases</li>
+            <li>REST APIs</li>
+            <li>Git &amp; GitHub</li>
+            <li>UI/UX Design</li>
+            <li>Problem Solving</li>
+            <li>Team Collaboration</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 class="section__title" id="about-heading">About Me</h2>
+        <div class="about__grid">
+          <div class="about__bio">
+            <p>
+              I'm Werwerdu Ebenezer Teye, a software developer with a passion for building
+              reliable applications and learning new technologies. I focus on writing clean,
+              maintainable code that solves real-world problems.
+            </p>
+            <p>
+              From backend logic to user-facing interfaces, I enjoy every stage of development
+              and love collaborating with teams to deliver meaningful digital products.
+            </p>
+          </div>
+          <div class="skills">
+            <h3 class="skills__title">Skills</h3>
+            <ul class="skills__list">
+              <li class="skill-tag">Python</li>
+              <li class="skill-tag">JavaScript</li>
+              <li class="skill-tag">React</li>
+              <li class="skill-tag">Node.js</li>
+              <li class="skill-tag">MongoDB</li>
+              <li class="skill-tag">Express.js</li>
+              <li class="skill-tag">Figma</li>
+              <li class="skill-tag">Agile Methods</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 class="section__title" id="projects-heading">Projects</h2>
+        <p class="section__intro">A selection of work that highlights my approach to design and development.</p>
+        <div class="projects__grid">
+          <article class="project-card">
+            <div class="project-card__image project-card__image--one" aria-hidden="true"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Campus Event Hub</h3>
+              <p class="project-card__desc">
+                A platform for students to discover, register for, and share campus events
+                with real-time updates and calendar integration.
+              </p>
+              <ul class="project-card__tags">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__image project-card__image--two" aria-hidden="true"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Fitness Tracker Dashboard</h3>
+              <p class="project-card__desc">
+                A personal health dashboard that logs workouts, tracks progress over time,
+                and visualizes fitness goals with interactive charts.
+              </p>
+              <ul class="project-card__tags">
+                <li>Python</li>
+                <li>Chart.js</li>
+                <li>REST API</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__image project-card__image--three" aria-hidden="true"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Inventory Management System</h3>
+              <p class="project-card__desc">
+                A business tool for tracking stock levels, generating reports, and sending
+                low-inventory alerts to shop owners and warehouse staff.
+              </p>
+              <ul class="project-card__tags">
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>Bootstrap</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 class="section__title" id="contact-heading">Contact</h2>
+        <p class="section__intro">
+          Have a project in mind or want to connect? Send me a message and I'll get back to you.
+        </p>
+
+        <p class="contact-info">
+          Phone:
+          <a href="tel:+233570656980">057 065 6980</a>
+        </p>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="name">Full Name <span aria-hidden="true">*</span></label>
+            <input
+              class="form-input"
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+              aria-required="true"
+              aria-describedby="name-error"
+            >
+            <span class="form-error" id="name-error" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address <span aria-hidden="true">*</span></label>
+            <input
+              class="form-input"
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+              aria-required="true"
+              aria-describedby="email-error"
+            >
+            <span class="form-error" id="email-error" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject <span aria-hidden="true">*</span></label>
+            <input
+              class="form-input"
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              aria-required="true"
+              aria-describedby="subject-error"
+            >
+            <span class="form-error" id="subject-error" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea
+              class="form-input form-input--textarea"
+              id="message"
+              name="message"
+              rows="5"
+              required
+              aria-required="true"
+              aria-describedby="message-error"
+            ></textarea>
+            <span class="form-error" id="message-error" role="alert"></span>
+          </div>
+
+          <button class="btn btn--primary btn--full" type="submit">Send Message</button>
+          <p class="form-success" id="form-success" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; <span id="year"></span> Werwerdu Ebenezer Teye. All rights reserved.</p>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
